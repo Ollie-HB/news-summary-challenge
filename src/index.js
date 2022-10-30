@@ -1,4 +1,7 @@
+const NewsClient = require("./newsClient");
 const NewsModel = require("./newsModel");
+const NewsView = require("./newsView");
 
 const model = new NewsModel();
-console.log(model.getNews());
+const client = new NewsClient();
+const view = new NewsView(model, client);

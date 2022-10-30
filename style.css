@@ -1,0 +1,23 @@
+h1, h3 {
+  font-family: sans-serif;
+  font: verdana;
+  color: white;
+  text-align: center;
+}
+
+html {
+  background:#fc7a3e;
+}
+
+.footer {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 62px;
+  background-color: #ffffff;
+  font-family: sans-serif;
+  font: verdana;
+  color: black;
+  text-align: center;
+}

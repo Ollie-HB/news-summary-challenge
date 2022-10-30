@@ -1,29 +1,23 @@
-// class NotesView {
-//   constructor(model, client) {
-//     this.model = model;
-//     this.client = client;
-//     this.mainContainerEl = document.querySelector('#main-container');
+class NewsView {
+  constructor(model, client) {
+    this.model = model;
+    this.client = client;
+    this.mainContainerEl = document.querySelector('#main-container');
 
-//     this.displayNotes()
-//     };
+    // this.displayHeadlines();
+    };
 
-//     displayNews(){
-//       const notes = this.model.getNotes();
-//     notes.forEach(note => {
-//       const noteElement = document.createElement('div');
-//       noteElement.textContent = note;
-//       noteElement.className = 'note';
-//       document.querySelector('#note-input').value = ''
-//       this.mainContainerEl.append(noteElement);
-//     });
-//   };
-//     }
+    displayHeadlines(){
+      const headlines = this.model.getHeadlines();
+      this.client.loadNews()
 
-//   displayNewsFromApi(){
-//     this.client.loadNotes((notes) => {
-//       this.model.setNotes(notes);
-//       this.displayNotes();
-   
-//     });
+      // news.forEach(story => {
+      // const storyElement = document.createElement('div');
+      // storyElement.className = 'story';
+      // this.mainContainerEl.append(storyElement);
+    }
+  };
     
-//   }
+
+
+  module.exports = NewsView;
